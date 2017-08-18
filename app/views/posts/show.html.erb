@@ -1,0 +1,27 @@
+<h2> <%= @post.storename %> </h2> <!-- 매장명 -->
+주소
+<p> <%= @post.storeloc %> <%= @post.detailloc %> </p> <!-- 주소 -->
+영업시간
+<p> <%= @post.opentime %> 부터 <%= @post.closetime %> 까지 </p> <!-- 영업시간 -->
+가게 소개
+<p> <%= @post.storeintro %> </p> <!-- 가게 소개 -->
+
+<hr>
+<h3>리뷰</h3>
+<form action='/posts/show/<%= @post.id %>/comments/create' method='post'>
+ <input type='text' name='input_comment'>
+ <input type='submit'>
+</form>
+
+<hr>
+<% @comments.each do |comment| %>
+
+<p>=> <%= comment.content %> 
+<a href="/posts/show/<%= @post.id %>/comments/destroy/<%= comment.id %>" data-confirm="댓글을 삭제할까요?"data-method="post"><button type="button" class="btn btn-outline-warning">댓글삭제</button></a></p>
+<% end %>
+<hr>
+<a href="/"><button type="button" class="btn btn-outline-warning">목록</button></a>
+<a href="/posts/edit/<%= @post.id %>"><button type="button" class="btn btn-outline-warning">수정</button></a>
+<a href="/posts/destroy/<%= @post.id %>" data-confirm="게시글을 삭제할까요?"data-method="post"><button type="button" class="btn btn-outline-warning">삭제</button></a>
+
+

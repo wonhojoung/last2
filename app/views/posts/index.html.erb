@@ -1,0 +1,11 @@
+<br><h1>원샷에 런칭된 술집들 입니다.</h1><br>
+<% @posts.each do |post| %>
+  <div class="card">
+    <div class="card-block">
+      <h4><a href="/posts/show/<%= post.id %>"> <%= post.storename %> </a></h4>
+    </div>
+    <img class="card-img-bottom" src="..." alt="Card image cap">
+  </div>
+<% end %>
+<%= paginate @posts %>
+<a href="/posts/new"><button type="button" class="btn btn-outline-warning">매장등록</button></a>

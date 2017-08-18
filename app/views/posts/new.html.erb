@@ -1,0 +1,138 @@
+<br>
+<!--
+<form action="/posts/create" method="post">
+    <p>제목</p>
+    <input type="text" name="input_title">
+    <p>내용</p>
+    <input type="text" name="input_content">
+    <p>제출</p>
+    <input type="submit">
+</form>
+-->
+
+<!--
+<div class="card">
+  <div class="card-block">
+    <%= form_tag '/posts/create', method: 'post' do %>
+    <p align="center">매장명 <%= text_field_tag 'input_title', nil , style: "width:33%" %></p>
+    <p align="center">매장전화번호 <%= text_field_tag 'input_title', nil , style: "width:33%" %></p>
+    <p align="center">매장 지역 <input type="text" name="browser" list="list" id="browser" placeholder="지역을 선택해주세요">-->
+
+<form action="/posts/create" method="post">
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">대표자 이름</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="ex) 홍길동" name="input_mastername">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">대표자 연락처</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="ex) 010-1234-1234" name="input_masternumber">
+    </div>
+  </div>      
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">매장명</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="매장명" name="input_storename">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">매장번호</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="ex) 033-123-1234" name="input_storenumber">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">매장위치</label>
+    <div class="col-3">
+      <select class="custom-select" name="input_storeloc">
+        <option>교동</option> <option>근화동</option>
+        <option>낙원동</option> <option>사농동</option>
+        <option>삼천동</option> <option>석사동</option>
+        <option>송암동</option> <option>신동</option>
+        <option>약사동</option> <option>옥천동</option>
+        <option>온의동</option> <option>우두동</option>
+        <option>운교동</option> <option>조양동</option>
+        <option>죽림동</option> <option>중도동</option>
+        <option>칠전동</option> <option>퇴계동</option>
+        <option>효자1동</option> <option>효자2동</option>
+        <option>효자3동</option> <option>후평1동</option>
+        <option>후평2동</option> <option>후평3동</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">상세위치</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="ex) 강원로 1번길 1" name="input_detailloc">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">오픈시간</label>
+    <div class="col-3">
+      <input class="form-control" type="time" value="00:00:00" name="input_opentime">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">마감시간</label>
+    <div class="col-3">
+      <input class="form-control" type="time" value="00:00:00" name="input_closetime">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">수용인원</label>
+    <div class="col-3">
+      <select class="custom-select" name="input_acceptpeople1">
+        <option>1명</option>
+        <option>2명</option>
+        <option>3명</option>
+        <option>4명</option>
+        <option>5명</option>
+        <option>6명</option>
+        <option>7명</option>
+        <option>8명</option>
+      </select>부터
+      <select class="custom-select" name="input_acceptpeople2">
+        <option>1명</option>
+        <option>2명</option>
+        <option>3명</option>
+        <option>4명</option>
+        <option>5명</option>
+        <option>6명</option>
+        <option>7명</option>
+        <option>8명</option>
+        <option>9명</option>
+        <option>10명</option>
+        <option>11명</option>
+        <option>12명</option>
+        <option>13명</option>
+        <option>14명</option>
+        <option>15명</option>
+      </select>까지
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">가게 소개</label>
+    <div class="col-3">
+      <input class="form-control" type="text" placeholder="가게 소개" name="input_storeintro">
+    </div>
+  </div>
+  <div class="form-group row" align="center">
+    <label class="col-2 col-form-label">사진첨부</label>
+    <div class="col-3">
+      <input accept="image/*" type="file">
+  </div>
+  <div class="form-group row">
+    <button type="submit" class="btn btn-outline-warning">매장정보 등록</button>
+  </div>
+</form>
+<!--메뉴와 가격
+    <p>
+      <%= text_area_tag 'input_content', nil , style: "width:33%", rows: 20 %>
+    </p>
+    <%= submit_tag '제출' %>
+    <% end %>
+  </div>
+  <img class="card-img-bottom" src="..." alt="매장의 사진을 올려주세">
+</div>-->
